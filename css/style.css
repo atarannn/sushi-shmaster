@@ -1,0 +1,682 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+body {
+  margin: 0;
+  min-width: 320px; }
+
+a {
+  text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+.container {
+  width: 100%;
+  padding: 0 20px; }
+  @media (min-width: 576px) {
+    .container {
+      padding: 0 30px; } }
+  @media (min-width: 768px) {
+    .container {
+      padding: 0 40px; } }
+  @media (min-width: 991px) {
+    .container {
+      padding: 0 50px; } }
+
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  background-color: #0066cc; }
+  .header__inner {
+    min-height: 100px;
+    padding: 20px 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center; }
+
+.logo {
+  display: flex;
+  flex-flow: column;
+  justify-content: start;
+  align-items: center; }
+  .logo img {
+    width: 60%; }
+    @media (min-width: 768px) {
+      .logo img {
+        width: 40%; } }
+  .logo__link {
+    font-size: 18px;
+    font-family: "PT Sans";
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    font-style: normal;
+    margin: 0;
+    padding-top: 10px; }
+    @media (min-width: 768px) {
+      .logo__link {
+        font-size: 22px;
+        font-family: "PT Sans";
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+        font-style: normal;
+        margin: 0;
+        padding-top: 0;
+        padding-left: 20px; } }
+    @media (min-width: 991px) {
+      .logo__link {
+        font-size: 28px;
+        font-family: "PT Sans";
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+        font-style: normal;
+        margin: 0; } }
+  @media (min-width: 768px) {
+    .logo {
+      display: flex;
+      flex-flow: row;
+      justify-content: start;
+      align-items: center; } }
+
+.mainButton {
+  background-color: #ff6633;
+  border: none;
+  border-radius: 2px;
+  transition: transform 0.3s linear;
+  font-size: 16px;
+  font-family: "PT Sans";
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  font-style: normal;
+  margin: 0;
+  padding: 10px 17px; }
+  .mainButton:focus {
+    outline: none; }
+  .mainButton:hover {
+    transform: translate3d(0, -10px, 0);
+    transition: transform 0.3s linear;
+    cursor: pointer; }
+  @media (min-width: 768px) {
+    .mainButton {
+      font-size: 18px;
+      font-family: "PT Sans";
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+      font-style: normal;
+      margin: 0; } }
+  @media (min-width: 991px) {
+    .mainButton {
+      font-size: 22px;
+      font-family: "PT Sans";
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+      font-style: normal;
+      margin: 0;
+      padding: 12px 20px; } }
+
+.section {
+  position: relative;
+  margin-top: 150px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center; }
+
+.mainText__caption {
+  font-size: 18px;
+  font-family: "PT Sans";
+  font-weight: 700;
+  color: #111;
+  text-align: center;
+  font-style: normal;
+  margin: 0;
+  padding: 20px 0; }
+  .mainText__caption h2:last-child {
+    padding-top: 10px; }
+  @media (min-width: 768px) {
+    .mainText__caption {
+      font-size: 20px;
+      font-family: "PT Sans";
+      font-weight: 700;
+      color: #111;
+      text-align: center;
+      font-style: normal;
+      margin: 0; } }
+  @media (min-width: 991px) {
+    .mainText__caption {
+      font-size: 24px;
+      font-family: "PT Sans";
+      font-weight: 700;
+      color: #111;
+      text-align: center;
+      font-style: normal;
+      margin: 0; } }
+.mainText p {
+  font-size: 18px;
+  font-family: "PT Sans";
+  font-weight: 400;
+  color: #111;
+  text-align: center;
+  font-style: normal;
+  margin: 0;
+  padding-top: 30px;
+  line-height: 1.5em; }
+  @media (min-width: 768px) {
+    .mainText p {
+      font-size: 20px;
+      font-family: "PT Sans";
+      font-weight: 400;
+      color: #111;
+      text-align: center;
+      font-style: normal;
+      margin: 0; } }
+  @media (min-width: 991px) {
+    .mainText p {
+      font-size: 24px;
+      font-family: "PT Sans";
+      font-weight: 400;
+      color: #111;
+      text-align: center;
+      font-style: normal;
+      margin: 0; } }
+
+.menu {
+  padding: 40px 0; }
+  .menu h2 {
+    font-size: 20px;
+    font-family: "PT Sans";
+    font-weight: 700;
+    color: #111;
+    text-align: start;
+    font-style: normal;
+    margin: 0; }
+    @media (min-width: 768px) {
+      .menu h2 {
+        font-size: 24px;
+        font-family: "PT Sans";
+        font-weight: 700;
+        color: #111;
+        text-align: start;
+        font-style: normal;
+        margin: 0; } }
+    @media (min-width: 991px) {
+      .menu h2 {
+        font-size: 32px;
+        font-family: "PT Sans";
+        font-weight: 700;
+        color: #111;
+        text-align: start;
+        font-style: normal;
+        margin: 0; } }
+  .menu__cards {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center; }
+    @media (min-width: 768px) {
+      .menu__cards {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap; } }
+    @media (min-width: 991px) {
+      .menu__cards {
+        padding-top: 20px; } }
+
+.card {
+  border: 1px solid #999999;
+  border-radius: 20px;
+  padding: 20px 0;
+  margin-top: 30px;
+  width: 270px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); }
+  @media (min-width: 768px) {
+    .card {
+      margin-right: 30px;
+      margin-top: 20px; } }
+  .card img {
+    width: 100%;
+    height: auto; }
+    @media (min-width: 768px) {
+      .card img {
+        width: 90%; } }
+  .card__text {
+    padding-top: 20px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center; }
+    .card__text h4 {
+      font-size: 20px;
+      font-family: "PT Sans";
+      font-weight: 700;
+      color: #990000;
+      text-align: center;
+      font-style: normal;
+      margin: 0; }
+      @media (min-width: 991px) {
+        .card__text h4 {
+          font-size: 24px;
+          font-family: "PT Sans";
+          font-weight: 700;
+          color: #990000;
+          text-align: center;
+          font-style: normal;
+          margin: 0; } }
+    .card__text p {
+      font-size: 16px;
+      font-family: "PT Sans";
+      font-weight: 400;
+      color: #111;
+      text-align: center;
+      font-style: normal;
+      margin: 0;
+      padding: 20px 0;
+      margin: 0 auto;
+      width: 80%; }
+      @media (min-width: 991px) {
+        .card__text p {
+          font-size: 20px;
+          font-family: "PT Sans";
+          font-weight: 400;
+          color: #111;
+          text-align: center;
+          font-style: normal;
+          margin: 0; } }
+    .card__text .mainButton {
+      background-color: transparent;
+      border: none;
+      border-radius: 2px;
+      transition: transform 0.3s linear;
+      font-size: 16px;
+      font-family: "PT Sans";
+      font-weight: 400;
+      color: #111;
+      text-align: center;
+      font-style: normal;
+      margin: 0;
+      margin-top: 15px; }
+      .card__text .mainButton:focus {
+        outline: none; }
+      .card__text .mainButton:hover {
+        transform: translate3d(0, -10px, 0);
+        transition: transform 0.3s linear;
+        cursor: pointer; }
+      @media (min-width: 991px) {
+        .card__text .mainButton {
+          font-size: 20px;
+          font-family: "PT Sans";
+          font-weight: 400;
+          color: #111;
+          text-align: center;
+          font-style: normal;
+          margin: 0;
+          margin-top: 20px; } }
+
+.cardBig {
+  width: 300px;
+  padding: 30px 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center; }
+  .cardBig__top img, .cardBig__bottom img {
+    width: 100%;
+    height: auto; }
+  .cardBig h3 {
+    padding: 30px 0;
+    font-size: 18px;
+    font-family: "PT Sans";
+    font-weight: 700;
+    color: #990000;
+    text-align: start;
+    font-style: normal;
+    margin: 0; }
+    @media (min-width: 991px) {
+      .cardBig h3 {
+        font-size: 22px;
+        font-family: "PT Sans";
+        font-weight: 700;
+        color: #990000;
+        text-align: start;
+        font-style: normal;
+        margin: 0; } }
+  .cardBig__top {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: flex-start; }
+    .cardBig__top a {
+      font-size: 20px;
+      font-family: "PT Sans";
+      font-weight: 700;
+      color: #111;
+      text-align: center;
+      font-style: normal;
+      margin: 0;
+      padding-bottom: 20px;
+      transition: transform 0.3s linear; }
+      .cardBig__top a:hover {
+        transform: translate3d(20px, 0, 0);
+        transition: transform 0.3s linear; }
+      @media (min-width: 991px) {
+        .cardBig__top a {
+          font-size: 24px;
+          font-family: "PT Sans";
+          font-weight: 700;
+          color: #111;
+          text-align: start;
+          font-style: normal;
+          margin: 0; } }
+  .cardBig__bottom {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: flex-end; }
+    .cardBig__bottom a {
+      font-size: 20px;
+      font-family: "PT Sans";
+      font-weight: 700;
+      color: #111;
+      text-align: center;
+      font-style: normal;
+      margin: 0;
+      padding-top: 20px;
+      transition: transform 0.3s linear; }
+      .cardBig__bottom a:hover {
+        transform: translate3d(-20px, 0, 0);
+        transition: transform 0.3s linear; }
+      @media (min-width: 991px) {
+        .cardBig__bottom a {
+          font-size: 24px;
+          font-family: "PT Sans";
+          font-weight: 700;
+          color: #111;
+          text-align: start;
+          font-style: normal;
+          margin: 0; } }
+
+.sliderWrap {
+  background: #66ccff;
+  width: 100%;
+  padding: 70px 0; }
+  .sliderWrap h2 {
+    font-size: 26px;
+    font-family: "PT Sans";
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    font-style: normal;
+    margin: 0;
+    text-shadow: rgba(0, 0, 0, 0.5) 0 0 20px; }
+    @media (min-width: 768px) {
+      .sliderWrap h2 {
+        font-size: 30px;
+        font-family: "PT Sans";
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+        font-style: normal;
+        margin: 0; } }
+    @media (min-width: 991px) {
+      .sliderWrap h2 {
+        font-size: 34px;
+        font-family: "PT Sans";
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+        font-style: normal;
+        margin: 0; } }
+
+.slider {
+  max-width: 90%;
+  background-color: #ffffff;
+  position: relative;
+  height: 450px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center; }
+  @media (min-width: 991px) {
+    .slider {
+      height: 350px; } }
+  .slider__item__1 {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center; }
+    @media (min-width: 991px) {
+      .slider__item__1 {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: center; } }
+    .slider__item__1__left {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: flex-start; }
+      @media (min-width: 991px) {
+        .slider__item__1__left {
+          display: flex;
+          flex-flow: row;
+          justify-content: center;
+          align-items: flex-start;
+          flex-direction: row-reverse; } }
+    .slider__item__1__right {
+      display: flex;
+      flex-flow: column;
+      justify-content: end;
+      align-items: flex-end; }
+      @media (min-width: 991px) {
+        .slider__item__1__right {
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column-reverse; } }
+    .slider__item__1__left, .slider__item__1__right {
+      padding: 15px; }
+      .slider__item__1__left img, .slider__item__1__right img {
+        width: 60%; }
+        @media (min-width: 576px) {
+          .slider__item__1__left img, .slider__item__1__right img {
+            width: 55%; } }
+        @media (min-width: 768px) {
+          .slider__item__1__left img, .slider__item__1__right img {
+            width: 45%; } }
+        @media (min-width: 991px) {
+          .slider__item__1__left img, .slider__item__1__right img {
+            width: 65%; } }
+  .slider__item__2 {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px; }
+    @media (min-width: 991px) {
+      .slider__item__2 {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: center; } }
+    .slider__item__2__text {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center; }
+      .slider__item__2__text .item__text {
+        padding: 20px; }
+    .slider__item__2 img {
+      width: 80%; }
+      @media (min-width: 576px) {
+        .slider__item__2 img {
+          width: 55%; } }
+      @media (min-width: 768px) {
+        .slider__item__2 img {
+          width: 40%; } }
+  .slider__item__3 {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px; }
+    @media (min-width: 991px) {
+      .slider__item__3 {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: center; } }
+    .slider__item__3__text {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center; }
+      .slider__item__3__text .item__text {
+        padding: 20px; }
+    .slider__item__3 .sliderImg {
+      display: none; }
+      @media (min-width: 991px) {
+        .slider__item__3 .sliderImg {
+          display: block; } }
+    .slider__item__3 img {
+      width: 70%; }
+      @media (min-width: 425px) {
+        .slider__item__3 img {
+          width: 50%; } }
+      @media (min-width: 576px) {
+        .slider__item__3 img {
+          width: 40%; } }
+      @media (min-width: 768px) {
+        .slider__item__3 img {
+          width: 30%; } }
+  .slider .item__text {
+    font-size: 24px;
+    font-family: "PT Sans";
+    font-weight: 700;
+    color: #111;
+    text-align: center;
+    font-style: normal;
+    margin: 0; }
+    @media (min-width: 576px) {
+      .slider .item__text {
+        font-size: 28px;
+        font-family: "PT Sans";
+        font-weight: 700;
+        color: #111;
+        text-align: center;
+        font-style: normal;
+        margin: 0; } }
+    @media (min-width: 768px) {
+      .slider .item__text {
+        font-size: 34px;
+        font-family: "PT Sans";
+        font-weight: 700;
+        color: #111;
+        text-align: center;
+        font-style: normal;
+        margin: 0; } }
+    @media (min-width: 991px) {
+      .slider .item__text {
+        font-size: 36px;
+        font-family: "PT Sans";
+        font-weight: 700;
+        color: #111;
+        text-align: center;
+        font-style: normal;
+        margin: 0; } }
+  @media (min-width: 991px) {
+    .slider .bottomImg {
+      width: 95%; } }
+
+.slider-dots {
+  text-align: center;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center; }
+  .slider-dots_item {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    margin: 0 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease; }
+    .slider-dots_item:hover {
+      background: rgba(179, 178, 178, 0.55); }
+  .slider-dots .prev, .slider-dots .next {
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 52px;
+    padding: 0 20px;
+    transition: color 0.3s ease; }
+    .slider-dots .prev:hover, .slider-dots .next:hover {
+      color: rgba(179, 178, 178, 0.55); }
+
+.slider__item__1, .slider__item__2, .slider__item__3 {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4; }
+  to {
+    opacity: 1; } }
+@keyframes fade {
+  from {
+    opacity: 0.4; }
+  to {
+    opacity: 1; } }
+.footer {
+  background-color: #ffffff;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0; }
+  .footer p {
+    padding: 20px 0;
+    font-size: 18px;
+    font-family: "PT Sans";
+    font-weight: 700;
+    color: #111;
+    text-align: center;
+    font-style: normal;
+    margin: 0; }
+    @media (min-width: 576px) {
+      .footer p {
+        font-size: 22px;
+        font-family: "PT Sans";
+        font-weight: 700;
+        color: #111;
+        text-align: center;
+        font-style: normal;
+        margin: 0; } }
+
+/*# sourceMappingURL=style.css.map */

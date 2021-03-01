@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "vars";
+
+html{
+  box-sizing: border-box;
+}
+*,*::after,*::before{
+  box-sizing: inherit;
+}
+body{
+  margin: 0;
+  min-width: 320px;
+}
+a{
+  text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+}
+.container{
+  padding: 0 20px;
+  @media (min-width: 576px) {
+    padding: 0 30px;
+  }
+  @media (min-width: 768px) {
+    padding: 0 40px;
+  }
+  @media (min-width: 991px) {
+    padding: 0 50px;
+  }
+
+}
+
+// header
+.header{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  background-color: $blue;
+
+  &__inner{
+    min-height: 100px;
+    padding: 20px 0;
+    @include flexLayout;
+  }
+}
+
+.logo{
+  @include flexLayout(column, start, center);
+
+  & img{
+    width: 60%;
+    
+    @media (min-width: 768px) {
+      width: 40%;
+    }
+  }
+
+  &__link{
+    @include PTSans;
+    padding-top: 10px;
+
+    @media (min-width: 768px) {
+      @include PTSans(22px);
+      padding-top: 0;
+      padding-left: 20px;
+    }
+
+    @media (min-width: 991px) {
+      @include PTSans(28px);
+    }
+  }
+
+  @media (min-width: 768px) {
+    @include flexLayout(row, start,center);
+  }
+}
+
+.mainButton{
+  @include buttonStyle;
+  @include PTSans (16px, 700, #fff, center);
+  padding: 10px 17px;
+
+  @media (min-width: 768px) {
+    @include PTSans (18px, 700, #fff, center);
+  }
+
+  @media (min-width: 991px) {
+    @include PTSans (22px, 700, #fff, center);
+    padding: 12px 20px;
+  }
+}
+
+// main page
+.section{
+  position: relative;
+  top: 150px;
+
+  @include flexLayout (column, center, center);
+}
+
+.mainText{
+
+  &__caption{
+    @include PTSans (18px, 700, #111, center);
+    padding: 20px 0;
+
+    & h2:last-child{
+      padding-top: 10px;
+    }
+
+    @media (min-width: 768px) {
+      @include PTSans (20px, 700, #111, center);
+    }
+
+    @media (min-width: 991px) {
+      @include PTSans (24px, 700, #111, center);
+    }
+  }
+
+  & p{
+    @include  PTSans (18px, 400, #111, center);
+    padding-top: 30px;
+    line-height: 1.5em;
+
+    @media (min-width: 768px) {
+      @include PTSans (20px, 400, #111, center);
+    }
+
+    @media (min-width: 991px) {
+      @include PTSans (24px, 400, #111, center);
+    }
+  }
+}
+
+.menu{
+  padding: 40px 0;
+
+  & h2{
+    @include PTSans (20px, 700, #111, start);
+    
+    @media (min-width: 768px) {
+      @include PTSans (24px, 700, #111, start);
+    }
+
+    @media (min-width: 991px) {
+      @include PTSans (32px, 700, #111, start);
+    }
+  }
+
+  &__cards{
+    @include  flexLayout (column, center, center);
+    
+    @media (min-width: 768px) {
+      @include flexLayout(row, space-around, center);
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: 991px) {
+      padding-top: 20px;
+    }
+  }
+}
+
+.card{
+  border: 1px solid #999999;
+  border-radius: 20px;
+  padding: 20px 0;
+  margin-top: 30px;
+  width: 270px;
+  @include flexLayout(column, center, center);
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+
+  @media (min-width: 768px) {
+    margin-right: 30px;
+    margin-top: 20px;
+  }
+
+  & img{
+    width: 100%;
+    height: auto;
+    
+    @media (min-width: 768px) {
+      width: 90%;
+    }
+  }
+
+  &__text{
+    padding-top: 20px;
+    @include flexLayout(column, center, center);
+
+    & h4{
+      @include  PTSans (20px, 700, $red, center);
+      
+      @media (min-width: 991px) {
+        @include  PTSans (24px, 700, $red, center);
+      }
+    }
+
+    & p{
+      @include PTSans (16px, 400, #111, center);
+      padding: 20px 0;
+      margin: 0 auto;
+      width: 80%;
+      
+      @media (min-width: 991px) {
+        @include PTSans (20px, 400, #111, center);
+      }
+    }
+
+    .mainButton{
+      @include buttonStyle ($button-background: transparent);
+      @include PTSans (16px, 400, #111, center);
+      margin-top: 15px;
+
+      @media (min-width: 991px) {
+        @include PTSans (20px, 400, #111, center);
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.cardBig{
+  width: 300px;
+  padding: 30px 0;
+  @include flexLayout(column, space-between, center);
+
+  &__top, &__bottom{
+    & img{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  & h3{
+    padding: 30px 0;
+    @include PTSans (18px, 700, $red, start);
+
+    @media (min-width: 991px) {
+      @include PTSans (22px, 700, $red, start);
+    }
+  }
+
+  &__top{
+    @include flexLayout(column, space-around, flex-start);
+
+    & a{
+      @include PTSans (20px, 700, #111);
+      padding-bottom: 20px;
+      transition: transform 0.3s linear;
+
+      &:hover{
+        transform: translate3d(20px,0,0);
+        transition: transform 0.3s linear;
+      }
+
+      @media (min-width: 991px) {
+        @include PTSans (24px, 700, #111, start);
+      }
+    }
+  }
+
+  &__bottom{
+    @include flexLayout(column, space-around, flex-end);
+
+    & a{
+      @include PTSans (20px, 700, #111);
+      padding-top: 20px;
+      transition: transform 0.3s linear;
+
+      &:hover{
+        transform: translate3d(-20px,0,0);
+        transition: transform 0.3s linear;
+      }
+
+      @media (min-width: 991px) {
+        @include PTSans (24px, 700, #111, start);
+      }
+    }
+  }
+}
+
+// slider
+.sliderWrap{
+  background: $light-blue;
+  width: 100%;
+  padding: 70px 0;
+
+  & h2{
+    @include PTSans (26px, 700, #fff, center);
+    text-shadow: rgba(0,0,0,0.5) 0 0 20px;
+
+    @media (min-width: 768px) {
+      @include PTSans (30px, 700, #fff, center);
+    }
+    @media (min-width: 991px) {
+      @include PTSans (34px, 700, #fff, center);
+    }
+  }
+}
+
+.slider{
+  max-width: 90%;
+  background-color: #ffffff;
+  position: relative;
+  height: 450px;
+
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 15px;
+
+  @include flexLayout(row, center, center);
+
+  @media (min-width: 991px) {
+    height: 350px;
+  }
+
+  &__item__1{
+    @include flexLayout(column, space-around, center);
+    
+    @media (min-width: 991px) {
+      @include flexLayout(row, space-around, center);
+    }
+
+    &__left{
+      @include flexLayout(column, center, flex-start);
+
+      @media (min-width: 991px) {
+       @include flexLayout(row, center, flex-start);
+        flex-direction: row-reverse;
+     }
+    }
+
+    &__right{
+      @include flexLayout(column, end, flex-end);
+
+      @media (min-width: 991px) {
+       @include flexLayout(column, center, center);
+       flex-direction: column-reverse;
+     }
+    }
+
+    &__left, &__right{
+      padding: 15px;
+
+      & img{
+        width: 60%;
+
+        @media (min-width: 576px) {
+          width: 55%;
+        }
+        @media (min-width: 768px) {
+          width: 45%;
+        }
+        @media (min-width: 991px) {
+          width: 65%;
+        }
+      }
+    }
+  }
+
+  &__item__2{
+    @include flexLayout(column, center, center);
+    padding: 0 20px;
+
+    @media (min-width: 991px) {
+      @include flexLayout(row, space-around, center);
+    }
+
+    &__text{
+      @include flexLayout(column, center, center);
+
+      .item__text{
+        padding: 20px;
+      }
+    }
+
+    & img{
+      width: 80%;
+
+      @media (min-width: 576px){
+        width: 55%;
+      }
+      @media (min-width: 768px){
+        width: 40%;
+      }
+    }
+  }
+
+  &__item__3{
+    @include flexLayout(column, center, center);
+    padding: 0 20px;
+    
+    @media (min-width: 991px) {
+      @include flexLayout(row, space-around, center);
+    }
+
+    &__text{
+      @include flexLayout(column, center, center);
+
+      .item__text{
+        padding: 20px;
+      }
+    }
+
+    .sliderImg{
+      display: none;
+
+      @media (min-width: 991px) {
+        display: block;
+      }
+    }
+    & img{
+      width: 70%;
+      @media (min-width: 425px) {
+        width: 50%;
+      }
+      @media (min-width: 576px) {
+        width: 40%;
+      }
+      @media (min-width: 768px) {
+        width: 30%;
+      }
+    }
+  }
+
+  .item__text{
+    @include PTSans(24px, 700, #111, center);
+
+    @media (min-width: 576px) {
+      @include PTSans(28px, 700, #111, center);
+    }
+    @media (min-width: 768px) {
+      @include PTSans(34px, 700, #111, center);
+    }
+    @media (min-width: 991px) {
+      @include PTSans(36px, 700, #111, center);
+    }
+  }
+
+  .bottomImg{
+    @media (min-width: 991px) {
+      width: 95%;
+    }
+  }
+}
+
+.slider-dots {
+  text-align: center;
+  @include flexLayout(row,center,center);
+
+  &_item{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    margin: 0 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+
+    &:hover{
+      background: rgba(179, 178, 178, 0.55);
+    }
+  }
+
+  .prev, .next{
+    color: #ffffff;
+    cursor: pointer;
+
+    font-size: 52px;
+    padding: 0 20px;
+
+    transition: color 0.3s ease;
+
+    &:hover{
+      color: rgba(179, 178, 178, 0.55);
+    }
+  }
+}
+
+.slider__item__1, .slider__item__2, .slider__item__3{
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+.footer{
+  background-color: #ffffff;
+  @include flexLayout;
+
+  & p{
+    @include PTSans(28px, 700, #111, center);
+  }
+}

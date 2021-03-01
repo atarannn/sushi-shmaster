@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a class="logo" href="#">
+                <img src="img/clown-fish.png" alt="logo">
+                <h1 class="logo__link">Суши-шмастер</h1>
+            </a>
+            <button class="mainButton">Сделать заказ</button>
+        </div>
+    </div>
+</header>
+<section class="section">
+    <div class="container">
+        <div class="mainText">
+            <div class="mainText__caption">
+                <h2>Суши-шмастер - лучшее, что есть в твоем городе</h2>
+                <h2>Порадуй себя и своих родных и близких</h2>
+            </div>
+            <p>Ниже представлены наши  самые популярные позиции за последние полгода работы на карантине</p>
+        </div>
+        <div class="menu">
+            <h2>Актуальные позиции</h2>
+            <div class="menu__cards">
+                <div class="card">
+                    <img src="img/s3.png">
+                    <div class="card__text">
+                        <h4>Гринобль ролл</h4>
+                        <p>Закажи сей вкусный ролл, Он украсит ваший стол, Он порадует ваш глаз, Получи скорей экстаз!</p>
+                        <button class="mainButton">Заказать</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s2.png">
+                    <div class="card__text">
+                        <h4>Оранжад ролл</h4>
+                        <p>Закажи сей вкусный ролл, Он украсит ваший стол, Он порадует ваш глаз, Получи скорей экстаз!</p>
+                        <button class="mainButton"><span>Недоступно к заказу</span></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s1.png">
+                    <div class="card__text">
+                        <h4>Брауни рол</h4>
+                        <p>Закажи сей вкусный ролл, Он украсит ваший стол, Он порадует ваш глаз, Получи скорей экстаз!</p>
+                        <button class="mainButton"><span>Недоступно к заказу</span></button>
+                    </div>
+                </div>
+                <div class="cardBig">
+                    <div class="cardBig__top">
+                        <a href="#">Синергетичсекий сет</a>
+                        <img src="img/Кадр%20s44.png" alt="sushi-set-1">
+                    </div>
+                    <h3>А для абитуриентов у нас есть масса комплиментов!</h3>
+                    <div class="cardBig__bottom">
+                        <img src="img/Кадр%20s45.png" alt="sushi-set-2">
+                        <a href="#">Скарбовский сет</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sliderWrap">
+        <div class="container">
+            <h2>Самые выгодные предложения:</h2>
+            <div class="slider">
+                <div class="slider__item">
+                    <div class="slider__item__1">
+                        <div class="slider__item__1__left">
+                            <h5 class="item__text">Самые лучшие креветки!</h5>
+                            <img src="img/Кадр%20креветки.png" alt="креветка">
+                         </div>
+                        <div class="slider__item__1__right">
+                            <h5 class="item__text">А в подарок вам салфетки!</h5>
+                            <img src="img/салфетки.png" alt="салфетки">
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__item__2">
+                        <img src="img/Кадр%20Дорадо%20у%20нас%20как%20феромоны_.png" alt="дорадо">
+                        <div class="slider__item__2__text">
+                            <h5 class="item__text">Дорадо у нас как феромоны! Получи к нему Лимоны!</h5>
+                            <img src="img/линоны.png" alt="лимоны" class="bottomImg">
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__item__3">
+                        <img src="img/Кадр%20Получи%20в%20подарок%20%20водку!.png" alt="селедка">
+                        <div class="slider__item__3__text">
+                            <h5 class="item__text">Закажи у нас селедку! Получи в подарок водку!</h5>
+                            <img src="img/водка.png" alt="водка" class="bottomImg">
+                        </div>
+                        <img src="img/бутылка.png" alt="бутылка" class="sliderImg">
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-dots">
+                <a class="prev" onclick="minusSlide()">&#10094;</a>
+
+                <span class="slider-dots_item" onclick="currentSlide(1)"></span>
+                <span class="slider-dots_item" onclick="currentSlide(2)"></span>
+                <span class="slider-dots_item" onclick="currentSlide(3)"></span>
+
+                <a class="next" onclick="plusSlide()">&#10095;</a>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container">
+        <p>Copyright <span id="year"></span></p>
+    </div>
+</footer>
+<script type="text/javascript">
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlide() {
+        showSlides(slideIndex += 1);
+    }
+
+    function minusSlide() {
+        showSlides(slideIndex -= 1);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("slider__item");
+        var dots = document.getElementsByClassName("slider-dots_item");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "flex";
+        dots[slideIndex - 1].className += " active";
+    }
+
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+</body>
+</html>
